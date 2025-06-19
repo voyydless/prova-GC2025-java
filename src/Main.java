@@ -10,9 +10,10 @@ public class Main {
     public static void main(String[] args) {
         // Questão 1
         System.out.println("\n=== Questão 1 ===");
-        Item x = new Item("Caderno");
-        Item y = new Item("Caneta", 3);
-        System.out.println(x.quantidade + y.quantidade);
+        LocalDate base = LocalDate.of(2025, 6, 1);
+        int dias = 7;
+        LocalDate novaData = base.plusDays(dias * 2 - 3);
+        System.out.println(novaData.getDayOfMonth());
 
         // Questão 2
         System.out.println("\n=== Questão 2 ===");
@@ -27,6 +28,12 @@ public class Main {
 
         // Questão 3
         System.out.println("\n=== Questão 3 ===");
+        Item x = new Item("Caderno");
+        Item y = new Item("Caneta", 3);
+        System.out.println(x.quantidade + y.quantidade);
+
+        // Questão 4
+        System.out.println("\n=== Questão 4 ===");
         int prioridade = 4;
         int urgencia = 8;
 
@@ -38,8 +45,8 @@ public class Main {
             System.out.println("Tarefa comum");
         }
 
-        // Questão 4
-        System.out.println("\n=== Questão 4 ===");
+        // Questão 5
+        System.out.println("\n=== Questão 5 ===");
         int notificacoes = 0;
 
         for (int i = 1; i <= 5; i++) {
@@ -51,8 +58,8 @@ public class Main {
         }
         System.out.println(notificacoes);
 
-        // Questão 5
-        System.out.println("\n=== Questão 5 ===");
+        // Questão 6
+        System.out.println("\n=== Questão 6 ===");
         ArrayList<String> horarios = new ArrayList<>();
         horarios.add("08:00");
         horarios.add("10:00");
@@ -62,34 +69,35 @@ public class Main {
 
         System.out.println(horarios.get(1));
 
-        // Questão 6
-        System.out.println("\n=== Questão 6 ===");
+        // Questão 7
+        System.out.println("\n=== Questão 7 ===");
         Livro l = new Livro();
         l.titulo = "Java para Iniciantes";
         System.out.println(l.status());
         l.emprestar();
         System.out.println(l.status());
 
-        // Questão 7
-        System.out.println("\n=== Questão 7 ===");
+        // Questão 8
+        System.out.println("\n=== Questão 8 ===");
         Usuario u = new Usuario("João", 25);
         System.out.println(u);
 
-        // Questão 8
-        System.out.println("\n=== Questão 8 ===");
-        System.out.println("Resposta: git reset --soft HEAD1");
-
+        // Questão 9
         System.out.println("\n=== Questão 9 ===");
-        System.out.println("Resposta: get checkout Calculadora.java");
+        System.out.println("Resposta: git reset --soft HEAD1");
 
         // Questão 10
         System.out.println("\n=== Questão 10 ===");
+        System.out.println("Resposta: get checkout Calculadora.java");
+
+        // Questão 11
+        System.out.println("\n=== Questão 11 ===");
         LocalDate hoje = LocalDate.of(2025, 6, 9);
         LocalDate prazo = hoje.plusDays(10);
         System.out.println(prazo);
 
-        // Questão 11
-        System.out.println("\n=== Questão 11 ===");
+        // Questão 12
+        System.out.println("\n=== Questão 12 ===");
         LocalDate data = LocalDate.of(2025, 6, 10);
         int diasUteis = 0;
 
@@ -104,8 +112,8 @@ public class Main {
         }
         System.out.println(data);
 
-        // Questão 12
-        System.out.println("\n=== Questão 12 ===");
+        // Questão 13
+        System.out.println("\n=== Questão 13 ===");
         LocalTime envio = LocalTime.of(23, 0);
         LocalTime limite = LocalTime.of(22, 59);
 
@@ -115,8 +123,8 @@ public class Main {
             System.out.println("Tarefa enviada com sucesso");
         }
 
-        // Questão 13
-        System.out.println("\n=== Questão 13 ===");
+        // Questão 14
+        System.out.println("\n=== Questão 14 ===");
         List<Tarefa> tarefas = new ArrayList<>();
         tarefas.add(new Tarefa("Estudar"));
         tarefas.add(new Tarefa("Almoçar"));
@@ -124,8 +132,8 @@ public class Main {
         Collections.sort(tarefas);
         System.out.println(tarefas);
 
-        // Questão 14
-        System.out.println("\n=== Questão 14 ===");
+        // Questão 15
+        System.out.println("\n=== Questão 15 ===");
         ArrayList<String> outrasTarefas = new ArrayList<>();
         outrasTarefas.add("Estudar Java");
         outrasTarefas.add("Fazer exercícios");
